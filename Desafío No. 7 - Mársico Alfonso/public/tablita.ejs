@@ -1,0 +1,29 @@
+<table class="table">
+    <thead class="thead-dark">
+        <th>Articulo</th>
+        <th>Precio</th>
+        <th>Miniatura</th>
+    </thead>
+
+    <tbody>
+
+        <% if (productos) { %>
+        <% productos.forEach((el) => {%>
+        <tr>
+            <td><%=el.title%></td>
+            <td><%=el.price%></td>
+            <td><img class="medicine"
+                    src="https://cdn1.iconfinder.com/data/icons/medical-2-19/512/medical-healthcare-hospital-12-512.png">
+            </td>
+        </tr>
+        <% })%>
+        <% } else { %>
+        <tr>
+            <td></td>
+            <td>No hay productos</td>
+            <td></td>
+        </tr>
+        <% } %>
+
+    </tbody>
+</table>
